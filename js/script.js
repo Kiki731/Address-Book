@@ -93,7 +93,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     addressBook.contacts.forEach((element) => {
         let output = `
-        <div class="card mt-3" style="width: 18rem;">
+        <div class="card mt-3 mb-5" style="width: 18rem;">
         <div class="card-body">
         <h6 class="card-title">${element.getFullname()}</h6>
         <h6 class="card-subtitle mb-2 text-body-secondary">${phoneNumber}</h6>
