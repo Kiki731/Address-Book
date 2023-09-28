@@ -93,18 +93,14 @@ document.addEventListener("DOMContentLoaded", () => {
 
     addressBook.contacts.forEach((element) => {
         let output = `
-                        <div class="accordion-item">
-                            <h2 class="accordion-header">
-                                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapse${element.Id}" aria-expanded="false" aria-controls="collapse${element.Id}d">
-                                    ${element.getFullname()}
-                                </button>
-                            </h2>
-                            <div id="collapse${element.Id}" class="accordion-collapse collapse hide" data-bs-parent="#accordionExample">
-                                <div class="accordion-body">
-                                    ${element.getDetails()}
-                                </div>
-                            </div>
-                        </div>
+        <div class="card mt-3" style="width: 18rem;">
+        <div class="card-body">
+        <h6 class="card-title">${element.getFullname()}</h6>
+        <h6 class="card-subtitle mb-2 text-body-secondary">${phoneNumber}</h6>
+        <p class="card-text">${email}</p>
+        </div>
+    </div>
+          
                     `
 
         $("#output2").append(output);
@@ -118,3 +114,25 @@ document.addEventListener("DOMContentLoaded", () => {
 //         document.getElementById("#display").prepend();
 //     })
 // })
+{/* <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapse${element.Id}" aria-expanded="false" aria-controls="collapse${element.Id}d">
+                                    ${element.getFullname()}
+                                </button>
+                            </h2>
+                            <div id="collapse${element.Id}" class="accordion-collapse collapse hide" data-bs-parent="#accordionExample">
+                                <div class="accordion-body">
+                                    ${element.getDetails()}
+                                </div>
+                            </div>
+                        </div> */}
+
+                        
+                        // <div class="card" style ="width : 18rem">
+                        // <h6>This song details includes</h6>
+                        // <ul> 
+                        // <li> Name : ${firstName}</li> 
+                        // <li> Song : ${lastName}</li> 
+                        // <li> Release date : ${phoneNumber}</li> 
+                        // </ul>
+                        // </div>
