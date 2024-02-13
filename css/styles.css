@@ -23,6 +23,13 @@ li {
 .scroll{
     margin-left: 80px;
 }
+.white{
+    text-decoration: none;
+    color: white;
+}
 .Zaya{
     font-style: italic;
+}
+.white:hover{
+    color: black
 }

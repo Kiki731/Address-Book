@@ -93,13 +93,18 @@ document.addEventListener("DOMContentLoaded", () => {
 
     addressBook.contacts.forEach((element) => {
         let output = `
-        <div class="card mt-3 mb-5" style="width: 18rem;">
-        <div class="card-body">
-        <h6 class="card-title">${element.getFullname()}</h6>
-        <h6 class="card-subtitle mb-2 text-body-secondary">${phoneNumber}</h6>
-        <p class="card-text">${email}</p>
+        <div class="accordion-item">
+        <h2 class="accordion-header">
+            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapse${element.Id}" aria-expanded="false" aria-controls="collapse${element.Id}d">
+                ${element.getFullname()}
+            </button>
+        </h2>
+        <div id="collapse${element.Id}" class="accordion-collapse collapse hide" data-bs-parent="#accordionExample">
+            <div class="accordion-body">
+                ${element.getDetails()}
+            </div>
         </div>
-    </div>
+    </div>        
           
                     `
 
@@ -114,18 +119,7 @@ document.addEventListener("DOMContentLoaded", () => {
 //         document.getElementById("#display").prepend();
 //     })
 // })
-{/* <div class="accordion-item">
-                            <h2 class="accordion-header">
-                                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapse${element.Id}" aria-expanded="false" aria-controls="collapse${element.Id}d">
-                                    ${element.getFullname()}
-                                </button>
-                            </h2>
-                            <div id="collapse${element.Id}" class="accordion-collapse collapse hide" data-bs-parent="#accordionExample">
-                                <div class="accordion-body">
-                                    ${element.getDetails()}
-                                </div>
-                            </div>
-                        </div> */}
+{/*  */}
 
                         
                         // <div class="card" style ="width : 18rem">
@@ -136,3 +130,12 @@ document.addEventListener("DOMContentLoaded", () => {
                         // <li> Release date : ${phoneNumber}</li> 
                         // </ul>
                         // </div>
+    //                     <div class="card mt-3 mb-5" style="width: 18rem;">
+    //     <div class="card-body">
+    //     <h6 class="card-title">${element.getFullname()}</h6>
+    //     <h6 class="card-subtitle mb-2 text-body-secondary">${phoneNumber}</h6>
+    //     <p class="card-text">${email}</p>
+    //     </div>
+    // </div>
+
+
